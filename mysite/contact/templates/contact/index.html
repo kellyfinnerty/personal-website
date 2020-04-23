@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %} {% endblock %}
+{% block title %} Contact Me {% endblock%}
+
+{% block content %}
+    <div class="container">
+        <h1>Contact Me</h1>
+        <div class="row">
+            <div class="col-md">
+                <p>Hi, I'm Kelly and I would love to hear from you. Please reach out.</p>
+                <p>I am available by phone, email, and on LinkedIn.</p>
+            </div>
+            <div class="col-md">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+django-admin startproject mysite
+python3 manage.py startapp polls
+
+add polls to INSTALLED_APPS in mysite/settings.py
