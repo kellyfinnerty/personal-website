@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %} {% endblock %}
+{% block title %} Kelly Finnerty {% endblock%}
+
+{% block content %}
+    <div class="container">
+        <header>
+            <div class="row" id="home-name">
+                <div class="col-md-2">
+                    <img src="{% static '/img/me.jpeg'%}" id="profile-pic" alt="Picture of Kelly Finnerty"
+                        width="170px" height="170px"/>
+                </div>
+                <div class="col-md-8">
+                    <h1>Kelly Finnerty</h1>
+                    <p> Major Computer Science, Minor Anthropology | McGill University 2020 </p>
+                    <p>Boston, MA
+                        <a href="https://www.linkedin.com/in/kelly-finnerty-04538b14a/" target="_blank">
+                            <img src="{% static '/img/LinkedIn-Logos/LI-In-Bug.png'%}" alt="LinkedIn Logo" width="25px"/></a>
+                        <a href="https://github.com/kellyfinnerty" target="_blank">
+                            <img src="{% static '/img/GitHub-Mark-64px.png'%}" alt="Github Logo" height="25px" width="25px">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div class="row" id="home-about">
+            <div class="col">
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lacus laoreet non curabitur gravida. Natoque penatibus et magnis dis parturient montes nascetur. Ut aliquam purus sit amet
+                    luctus venenatis lectus. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. In fermentum et sollicitudin ac orci
+                    phasellus. Ipsum faucibus vitae aliquet nec ullamcorper sit. Interdum posuere lorem ipsum dolor. Arcu felis bibendum ut
+                    tristique et egestas quis ipsum. Lacus viverra vitae congue eu consequat ac. Sit amet est placerat in egestas erat imperdiet.
+                    Pulvinar sapien et ligula ullamcorper. Faucibus ornare suspendisse sed nisi lacus. Egestas quis ipsum suspendisse ultrices.
+                    Commodo elit at imperdiet dui accumsan sit amet nulla. Id nibh tortor id aliquet lectus proin nibh nisl condimentum.
+                    Eget velit aliquet sagittis id consectetur purus.
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="home-contact">
+            <div class="col-sm-3">
+                <h4>Resume
+                <a href="{% static '/files/Kelly_Finnerty_CV.pdf'%}" download>
+                    <img src="{% static '/img/get_app-black-18dp/2x/baseline_get_app_black_18dp.png'%}" width="22px" height="22px"/>
+                </a></h4>
+            </div>
+            <div class="col-sm-3">
+                <h3>Contact</h3>
+                <p>Email | Phone (978)-826-3929</p>
+            </div>
+        </div>
+
+        <div class="row" id="home-projects">
+            <div class="col">
+                <h2>Project 1</h2>
+                <p>Brief description of project.</p>
+            </div>
+            <div class="col">
+                <h2>Project 2</h2>
+                <p>Brief description of project.</p>
+            </div>
+            <div class="col">
+                <h2>Project 3</h2>
+                <p>Brief description of project.</p>
+            </div>
+        </div>
+
+        <div class="row" id="home-footer">
+            <div class="col">
+                <footer>Made by Me | 2020</footer>
+            </div>
+        </div>
+    </div>
+{% endblock%}

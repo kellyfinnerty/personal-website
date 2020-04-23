@@ -9,33 +9,38 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="shortcut icon" href="data:{% static '/img/kf-logo.ico'%};," type="image/x-icon">
     <title>{% block title %} {% endblock%}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light">
-        <a class="navbar-brand" href="/aboutme">Kelly Finnerty</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+    <nav class="navbar sticky-top navbar-expand-md navbar-light">
+        {% if request.path != '/about/' %}
+        <a class="navbar-brand" href="/about">Kelly Finnerty</a>
+        {% endif %}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/aboutme">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/about">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/projects" id="navbarDropdown" role="button" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">Projects</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/projects">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="/projects">All Projects</a>
                       <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Project 1</a>
+                      <a class="dropdown-item" href="#">Project 2</a>
                     </div>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/aboutme">About Me</a>
+                    <a class="nav-link" href="/about/resume">Resume / CV</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact">Contact</a>
