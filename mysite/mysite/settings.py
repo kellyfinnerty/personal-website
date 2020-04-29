@@ -128,3 +128,6 @@ STATICFILES_DIRS = [
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
