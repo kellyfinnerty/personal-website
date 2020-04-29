@@ -1,16 +1,24 @@
+:root {
+   --bone: #EAE0CC;
+   --old-gold: #D5B942;
+   --laurel-green: #ACBEA3;
+   --silver-pink: #C9ADA1;
+   --red-wood: #AD5D4E;
+   --pale-silver: #CFC0BD;
+}
 
 * {
     font-family: 'Nunito', sans-serif;
     text-align: center;
+    color: #545040;
 }
 
 h1, h2{
     margin: 20px 0px 25px 0px;
 }
 
-
-#profile-pic {
-  border-radius: 50%;
+.left{
+    text-align: left;
 }
 
 .row{
@@ -21,3 +29,11 @@ h1, h2{
   float: left !important;
 }
 
+a{
+    color: #7398e6;
+}
+
+a:hover{
+    color: var(--old-gold);
+    text-decoration: none;
+}

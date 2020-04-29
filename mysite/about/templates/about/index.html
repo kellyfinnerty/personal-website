@@ -1,32 +1,40 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block head %} {% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static '/css/about-index-style.css' %}">
+{% endblock %}
+
 {% block title %} Kelly Finnerty {% endblock%}
 
 {% block content %}
     <div class="container">
         <header>
             <div class="row" id="home-name">
-                <div class="col-md-2">
+                <div class="col-lg-1 offset-lg-2 col-md-4 col-sm-12">
                     <img src="{% static '/img/me.jpeg'%}" id="profile-pic" alt="Picture of Kelly Finnerty"
                         width="170px" height="170px"/>
                 </div>
-                <div class="col-md-8">
-                    <h1>Kelly Finnerty</h1>
-                    <p> Major Computer Science, Minor Anthropology | McGill University 2020 </p>
-                    <p>Boston, MA
-                        <a href="https://www.linkedin.com/in/kelly-finnerty-04538b14a/" target="_blank">
-                            <img src="{% static '/img/LinkedIn-Logos/LI-In-Bug.png'%}" alt="LinkedIn Logo" width="25px"/></a>
-                        <a href="https://github.com/kellyfinnerty" target="_blank">
-                            <img src="{% static '/img/GitHub-Mark-64px.png'%}" alt="Github Logo" height="25px" width="25px">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h1>
+                        Kelly Finnerty
+                        <a href="https://www.linkedin.com/in/kelly-finnerty-04538b14a/" target="_blank" data-toggle="tooltip" title="LinkedIn">
+                            <i class="fab fa-linkedin link-icon socials-icons" alt="link to linkedin"></i>
                         </a>
-                    </p>
+                        <a href="https://github.com/kellyfinnerty" target="_blank" data-toggle="tooltip" title="Github">
+                            <i class="fab fa-github-square link-icon socials-icons" alt="github link"></i>
+                        </a>
+
+                    </h1>
+                    <p>Computer Science, B.A. | McGill University 2016-2020</p>
+                    <p><i id="map-pin" class="fas fa-map-pin"></i>
+                        Boston, MA</p>
                 </div>
             </div>
         </header>
 
         <div class="row" id="home-about">
-            <div class="col">
+            <div class="col-lg-10 offset-lg-1 col-12">
                 <h2>About Me</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Lacus laoreet non curabitur gravida. Natoque penatibus et magnis dis parturient montes nascetur. Ut aliquam purus sit amet
@@ -40,37 +48,47 @@
             </div>
         </div>
 
-        <div class="row" id="home-contact">
-            <div class="col-sm-3">
-                <h4>Resume
-                <a href="{% static '/files/Kelly_Finnerty_CV.pdf'%}" download>
-                    <img src="{% static '/img/get_app-black-18dp/2x/baseline_get_app_black_18dp.png'%}" width="22px" height="22px"/>
-                </a></h4>
+        <div class="row p-o" id="home-contact">
+            <div class="col-md-4 offset-md-1 col-sm-12 mb-5 mt-3">
+                <h3>Resume
+                <a href="{% static '/files/Kelly_Finnerty_CV.pdf'%}" download data-toggle="tooltip" title="Download">
+                    <i id="download-icon" alt="download button" class="fas fa-download link-icon fa-xs"></i>
+                </a></h3>
             </div>
-            <div class="col-sm-3">
+            <div class="offset-md-2 col-md-4 col-sm-12">
                 <h3>Contact</h3>
-                <p>Email | Phone (978)-826-3929</p>
+                <p>
+                    <i alt='envelope' class="far fa-envelope contact-icon"></i>
+                    <a href="mailto:kfinnerty01@gmail.com" id="email">kfinnerty01@gmail.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-phone contact-icon"></i>
+                    (978)-826-3929
+                </p>
             </div>
         </div>
 
-        <div class="row" id="home-projects">
-            <div class="col">
-                <h2>Project 1</h2>
-                <p>Brief description of project.</p>
+        <div class="row p-o" id="home-projects">
+            <hr class="boundary col-12">
+            <div class="col-12">
+                <h2 id="project-header">Projects I've Worked On</h2>
             </div>
-            <div class="col">
-                <h2>Project 2</h2>
-                <p>Brief description of project.</p>
-            </div>
-            <div class="col">
-                <h2>Project 3</h2>
-                <p>Brief description of project.</p>
-            </div>
+            {% for project in projects %}
+                {% if not forloop.counter|divisibleby:2 %}
+                    <div class="col-sm-12 col-md-5 project mb-5">
+                {% else %}
+                    <div class="col-sm-12 col-md-5 offset-lg-2 project mb-5">
+                {% endif %}
+                    <img class="project-img img-thumbnail" src="{{ project.img.url }}" alt="{{ project.title }} image"/>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                </div>
+            {% endfor %}
         </div>
 
         <div class="row" id="home-footer">
             <div class="col">
-                <footer>Made by Me | 2020</footer>
+                <footer>Created by Me | 2020</footer>
             </div>
         </div>
     </div>
