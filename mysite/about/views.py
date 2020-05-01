@@ -9,9 +9,6 @@ def about(request):
     return render(request, 'about/index.html', context)
 
 
-def info(request):
-    return render(request, 'about/info.html')
-
-
-def resume(request):
+'''def resume(request):
     return render(request, 'about/resume.html')
+'''
