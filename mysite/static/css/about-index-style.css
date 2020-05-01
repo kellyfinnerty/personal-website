@@ -1,0 +1,70 @@
+:root {
+   --bone: #EAE0CC;
+   --old-gold: #D5B942;
+   --laurel-green: #ACBEA3;
+   --silver-pink: #C9ADA1;
+   --red-wood: #AD5D4E;
+   --pale-silver: #CFC0BD;
+}
+
+h1, h2, h3{
+    font-weight: bold;
+}
+
+#col{
+    background-color: var(--old-gold);
+}
+
+#profile-pic {
+    border-radius: 50%;
+}
+
+#map-pin {
+    margin-right: 5px;
+}
+
+#download-icon {
+    margin: 5px;
+}
+
+.contact-icon {
+    margin: 7px;
+}
+
+.project-img {
+    height: auto;
+    width: 250px;
+    margin: 20px;
+}
+
+a:hover{
+    color: hotpink;
+    text-decoration: none;
+}
+
+.project{
+    background-color: rgba(240, 245, 255, 0.5);
+    outline: 3px solid var(--old-gold);
+    padding: 25px;
+}
+
+#project-header {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.boundary{
+    border: 1px solid #545040;
+}
+
+.link-icon:hover {
+    color: var(--old-gold);
+}
+
+#home-footer {
+    margin: 100px 0px 25px 0px;
+}
+
+.socials-icons {
+    font-size: 1.25rem;
+}

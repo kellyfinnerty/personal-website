@@ -1,0 +1,8 @@
+# SWAM Database Description
+
+In a team, created a database for SWAM, a McGill club in which volunteers teach disabled children inexpensive swim lessons. We designed the database using an ER diagram and translated it to PostgreSQL to add data and make useful queries. Created a user interface.
+
+
+# Toutes les Plantes
+
+Created a plant (craigslist-style) website where users can upload plants, add them to their cart, and discuss products with sellers. Created using django, bootstrap and more. Worked on ordering, order history, and websocket communication.

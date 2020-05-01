@@ -32,21 +32,22 @@
                 </div>
             </div>
         </header>
-
-        <div class="row" id="home-about">
-            <div class="col-lg-10 offset-lg-1 col-12">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Lacus laoreet non curabitur gravida. Natoque penatibus et magnis dis parturient montes nascetur. Ut aliquam purus sit amet
-                    luctus venenatis lectus. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. In fermentum et sollicitudin ac orci
-                    phasellus. Ipsum faucibus vitae aliquet nec ullamcorper sit. Interdum posuere lorem ipsum dolor. Arcu felis bibendum ut
-                    tristique et egestas quis ipsum. Lacus viverra vitae congue eu consequat ac. Sit amet est placerat in egestas erat imperdiet.
-                    Pulvinar sapien et ligula ullamcorper. Faucibus ornare suspendisse sed nisi lacus. Egestas quis ipsum suspendisse ultrices.
-                    Commodo elit at imperdiet dui accumsan sit amet nulla. Id nibh tortor id aliquet lectus proin nibh nisl condimentum.
-                    Eget velit aliquet sagittis id consectetur purus.
-                </p>
+        <section id="about">
+            <div class="row" id="home-about">
+                <div class="col-lg-10 offset-lg-1 col-12">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Lacus laoreet non curabitur gravida. Natoque penatibus et magnis dis parturient montes nascetur. Ut aliquam purus sit amet
+                        luctus venenatis lectus. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. In fermentum et sollicitudin ac orci
+                        phasellus. Ipsum faucibus vitae aliquet nec ullamcorper sit. Interdum posuere lorem ipsum dolor. Arcu felis bibendum ut
+                        tristique et egestas quis ipsum. Lacus viverra vitae congue eu consequat ac. Sit amet est placerat in egestas erat imperdiet.
+                        Pulvinar sapien et ligula ullamcorper. Faucibus ornare suspendisse sed nisi lacus. Egestas quis ipsum suspendisse ultrices.
+                        Commodo elit at imperdiet dui accumsan sit amet nulla. Id nibh tortor id aliquet lectus proin nibh nisl condimentum.
+                        Eget velit aliquet sagittis id consectetur purus.
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="row p-o" id="home-contact">
             <div class="col-md-4 offset-md-1 col-sm-12 mb-5 mt-3">
@@ -68,23 +69,25 @@
             </div>
         </div>
 
-        <div class="row p-o" id="home-projects">
-            <hr class="boundary col-12">
-            <div class="col-12">
-                <h2 id="project-header">Projects I've Worked On</h2>
-            </div>
-            {% for project in projects %}
-                {% if not forloop.counter|divisibleby:2 %}
-                    <div class="col-sm-12 col-md-5 project mb-5">
-                {% else %}
-                    <div class="col-sm-12 col-md-5 offset-lg-2 project mb-5">
-                {% endif %}
-                    <img class="project-img img-thumbnail" src="{{ project.img.url }}" alt="{{ project.title }} image"/>
-                    <h3>{{ project.title }}</h3>
-                    <p>{{ project.description }}</p>
+        <section id="projects">
+            <div class="row p-o" id="home-projects">
+                <hr class="boundary col-12">
+                <div class="col-12">
+                    <h2 id="project-header">Projects I've Worked On</h2>
                 </div>
-            {% endfor %}
-        </div>
+                {% for project in projects %}
+                    {% if not forloop.counter|divisibleby:2 %}
+                        <div class="col-sm-12 col-md-5 project mb-5">
+                    {% else %}
+                        <div class="col-sm-12 col-md-5 offset-lg-2 project mb-5">
+                    {% endif %}
+                        <img class="project-img img-thumbnail" src="{{ project.img.url }}" alt="{{ project.title }} image"/>
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
 
         <div class="row" id="home-footer">
             <div class="col">
